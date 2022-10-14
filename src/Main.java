@@ -91,22 +91,42 @@ public class Main {
     }
 
     private static int[][] zkreslMacierz(int[][] macierz) {
-        boolean wasFound = false;
         for(int i = 0; i< macierz.length; i++) {
-            for(int j=0; j<macierz.length; j++){
+            boolean wasFound = false;
+            for(int j = 0; j< macierz.length; j++){
                 if(macierz[i][j]==-1){
                     wasFound=true;
+                    break;
                 }
             }
             if(!wasFound){
                 int drugiWierszZera = 0;
-                for (int j=0; j<macierz.length; j++){
-                    if(macierz[j][i]==-1){
-                        drugiWierszZera=j;
+                int kolumnaZera = 0;
+                for (int j = 0; j< macierz.length; j++){
+                    if(macierz[i][j]==-2) {
+                        for (int u = 0; u < macierz.length; u++) {
+                            if (macierz[u][j] == -1) {
+                                drugiWierszZera = u;
+                                kolumnaZera = j;
+                                break;
+                            }
+                        }
                     }
                 }
-                for(int j=0; j<macierz.length; j++){
-                    macierz[j][i] = -macierz[j][i];
+                for (int j = 0; j< macierz.length; j++){
+                    for (int u = 0; u < macierz.length; u++) {
+                        if (macierz[j][u] < 0) {
+                            macierz[j][u] = 0;
+                        }
+                    }
+                }
+                for(int j = 0; j< macierz.length; j++){
+                    if(macierz[j][kolumnaZera] > 0){
+                        macierz[j][kolumnaZera] = -macierz[j][kolumnaZera];
+                    }
+                    else {
+                        macierz[j][kolumnaZera] = 0;
+                    }
                 }
                 for(int p = 0; p < macierz.length; p++){
                     for (int l = 0; l < macierz.length; l++){
@@ -142,7 +162,7 @@ public class Main {
                 else if(macierz[i][j] > 100){
                     macierz[i][j] = macierz[i][j]-100+min;
                 }
-                else {
+                else if(macierz[i][j] != 0) {
                     macierz[i][j] -= min;
                 }
             }
@@ -169,7 +189,7 @@ public class Main {
                 macierz[j][i] = wartoscMacierzy;
             }
         }
-        return macierz;
+        return rozwiazPrzydzial(macierz);
     }
 
     private static int[][] dokonajRedukcji(int[][] macierz) {
