@@ -33,7 +33,6 @@ public class Main {
                     break;
                 case 4:
                     odczytajZPliku();
-                    wypiszMacierz(macierz);
                     break;
                 case 5:
                     macierz = dokonajRedukcji(macierz);
@@ -67,15 +66,15 @@ public class Main {
                         if(macierzTymczasowa[i][j] == 0){
                             macierzTymczasowa[i][j] = -2;
                         }
-                        if(macierzTymczasowa[j][i] == 0){
-                            macierzTymczasowa[j][i] = -2;
+                        if(macierzTymczasowa[j][pozycja] == 0){
+                            macierzTymczasowa[j][pozycja] = -2;
                         }
                     }
                     macierzTymczasowa[i][pozycja] = -1;
                     zakresloneZera++;
                 }
             }
-            List<Long> min = Arrays.stream(macierz).map(tablica -> IntStream.of(tablica).filter(value -> value==0).count())
+            List<Long> min = Arrays.stream(macierzTymczasowa).map(tablica -> IntStream.of(tablica).filter(value -> value==0).count())
                     .filter(values -> values>0).collect(Collectors.toList());
             if (min.isEmpty()){
                 flaga = false;
@@ -86,7 +85,7 @@ public class Main {
             return macierzTymczasowa;
         }
         else {
-            return zkreslMacierz(macierz);
+            return zkreslMacierz(macierzTymczasowa);
         }
     }
 
@@ -254,13 +253,13 @@ public class Main {
 
     public static void odczytajZPliku(){
         try{
-            System.out.print("Podaj rozmiar macierzy: ");
-            int rozmiarMacierzy = wybor.nextInt();
-            macierz = new int[rozmiarMacierzy][rozmiarMacierzy];
             System.out.print("Podaj nazwe pliku: ");
             String nazwaPliku = cin.nextLine();
             File file = new File(nazwaPliku);
             if (file.exists()){
+                System.out.print("Podaj rozmiar macierzy: ");
+                int rozmiarMacierzy = wybor.nextInt();
+                macierz = new int[rozmiarMacierzy][rozmiarMacierzy];
                 Scanner fileScanner = new Scanner(file);
                 while(fileScanner.hasNextLine()){
                     for (int i = 0; i<rozmiarMacierzy; i++){
@@ -270,6 +269,10 @@ public class Main {
                     }
                 }
                 fileScanner.close();
+                wypiszMacierz(macierz);
+            }
+            else{
+                System.out.println("Plik nie istnieje");
             }
         }catch (Exception e){
             System.out.println("Wystapil blad podczas odczytu pliku");
