@@ -87,7 +87,7 @@ public class Comi {
         ks.add(K2);
 
         int smallerResult = Collections.min(ks);
-        path = path.replace(String.valueOf(wierzcholekKoniec+1), pozycja+1 + " - 1");
+        path = path.replace(String.valueOf(wierzcholekKoniec+1), pozycja+1 + String.format(" - %s", wierzcholekKoniec+1));
         dl += smallerResult;
         d.set(pozycja, 0);
 
@@ -135,6 +135,7 @@ public class Comi {
             System.out.println("Plik zostal zapisany");
         }catch (Exception e){
             System.out.println("Wystapil problem podczas zapisu do pliku");
+            System.out.println(e.getMessage());
         }
     }
 
