@@ -1,54 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28f693db-1cad-4c6f-bf09-a5e19a51115f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AlJH/Szeregowanie/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AlJH/Szeregowanie/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AlJH/Szeregowanie/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AlJH/Szeregowanie/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AlJH/Szeregowanie/Szeregowanie.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AlJH/Szeregowanie/src/Algorytm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AlJH/Szeregowanie/src/HarmZadan.java" afterDir="false" />
+    <list default="true" id="ca510c08-02bf-4e06-8137-04c5692d04ab" name="Changes" comment="t">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2GRoDk8Y3KX8OnZv1u0amCr7u9Y" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2FzPbc9KyoepWSnfgb12Sxk3Mrz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/alone/Desktop/Wegiel/Comi"
+    "last_opened_file_path": "C:/Users/alone/Desktop/TiTPM_30504"
   }
 }]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Comi" />
+      <module name="Wegiel" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -62,15 +48,23 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="28f693db-1cad-4c6f-bf09-a5e19a51115f" name="Changes" comment="" />
-      <created>1666360641238</created>
+      <changelist id="ca510c08-02bf-4e06-8137-04c5692d04ab" name="Changes" comment="" />
+      <created>1665492014402</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1666360641238</updated>
-      <workItem from="1666360642534" duration="3314000" />
-      <workItem from="1666378782944" duration="4710000" />
-      <workItem from="1667461740242" duration="20000" />
+      <updated>1665492014402</updated>
+      <workItem from="1665492015859" duration="3832000" />
+      <workItem from="1665498888171" duration="195000" />
+      <workItem from="1666082951372" duration="45000" />
     </task>
+    <task id="LOCAL-00001" summary="t">
+      <created>1665498982754</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665498982754</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -88,6 +82,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="t" />
+    <option name="LAST_COMMIT_MESSAGE" value="t" />
   </component>
 </project>
